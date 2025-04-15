@@ -19,6 +19,9 @@ import { ConfigModule } from '@nestjs/config';
       database: process.env.DB_DATABASE || 'postgres',
       autoLoadEntities: true,
       synchronize: true, 
+      ssl: {
+        rejectUnauthorized: true,
+      },
     }),
     BlogModule,
   ],
